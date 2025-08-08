@@ -1,9 +1,25 @@
 ---
-# Use `replaces-mode` or `semver-mode`. Once you switch to `semver-mode`, there is no easy way back.
-updateGraph: replaces-mode
 packagemanifestClusterVersionLabel: auto
+addReviewers: true
 reviewers:
   - f41gh7
-  - k1rk
-  - Amper
+  - AndrewChubatiuk
   - Haleygo
+  - victoriametrics-bot
+fbc:
+  enabled: true
+  catalog_mapping:
+    - template_name: v4.12-v4.16.yaml
+      catalog_names:
+        - v4.12
+        - v4.13
+        - v4.14
+        - v4.15
+        - v4.16
+      type: olm.template.basic
+    - template_name: latest.yaml
+      catalog_names:
+        - v4.17
+        - v4.18
+        - v4.19
+      type: olm.template.basic
